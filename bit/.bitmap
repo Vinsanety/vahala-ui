@@ -12,9 +12,10 @@
     "button": {
         "name": "button",
         "scope": "vahalawebdesign.vahala-ui",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.ts",
-        "rootDir": "vahala-ui/button"
+        "rootDir": "vahala-ui/button",
+        "config": {}
     },
     "$schema-version": "17.0.0"
 }
