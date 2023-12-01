@@ -3,20 +3,23 @@ description: An accessible and customizable standard Button component.
 labels: ['vahala-ui', 'button', 'a11y']
 ---
 
+import { ThemeProvider } from '@vahalawebdesign/vahala-ui.themes.theme-provider';
 import { Button } from './button';
 
-The `vahala-ui/Button` component extends the [MUI Button](https://mui.com/material-ui/react-button) including its theming, inline `sx` styling, and props.
+The `<Button />` component extends the [MUI Button](https://mui.com/material-ui/react-button) including its theming, inline `sx` styling, and props.
 
 The component is fully accessible and customizable: supporting mouse, keyboard, and touch interactions, focus behavior, and ARIA props.
 
-<!-- ### Component usage
+### Component usage
 
 ```js
-<Button>Primary</Button>
-``` -->
+<Button>Button Text</Button>
+```
 
 ### Render Button
 
 ```js live
-<Button>Primary</Button>
+<ThemeProvider>
+  <Button>Primary</Button>
+</ThemeProvider>
 ```

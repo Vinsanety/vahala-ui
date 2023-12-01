@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import {
   ThemeProvider as MuiThemeProvider,
   createTheme,
@@ -16,10 +16,12 @@ export type ThemeProviderProps = {
 const defaultTheme = createTheme({
   palette: {
     primary: {
-      main: '#FF0000',
+      main: '#FF5733',
     },
     secondary: {
-      main: '#FFFF00',
+      main: '#E0C2FF',
+      light: '#F5EBFF',
+      contrastText: '#47008F',
     },
   },
 });

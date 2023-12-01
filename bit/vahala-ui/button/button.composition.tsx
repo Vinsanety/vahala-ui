@@ -1,17 +1,35 @@
+import { ThemeProvider } from '@vahalawebdesign/vahala-ui.themes.theme-provider';
+
 import { Button } from './button';
 
 export const PrimaryButton = () => {
-  return <Button>Primary</Button>;
+  return (
+    <ThemeProvider>
+      <Button>Primary</Button>
+    </ThemeProvider>
+  );
 };
 
 export const SecondaryButton = () => {
-  return <Button color="secondary">Secondary</Button>;
+  return (
+    <ThemeProvider>
+      <Button color="secondary">Secondary</Button>
+    </ThemeProvider>
+  );
 };
 
-export const PrimaryDisabledPButton = () => {
-  return <Button disabled>Disabled</Button>;
+export const PrimaryDisabledButton = () => {
+  return (
+    <ThemeProvider>
+      <Button disabled>Disabled</Button>
+    </ThemeProvider>
+  );
 };
 
 export const TextButton = () => {
-  return <Button variant="text">Text</Button>;
+  return (
+    <ThemeProvider>
+      <Button variant="text">Text</Button>
+    </ThemeProvider>
+  );
 };
