@@ -3,6 +3,7 @@ import {
   Button as MuiButton,
   ButtonProps as MuiButtonProps,
 } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
 export type ButtonProps = MuiButtonProps & {
   /**
@@ -35,6 +36,48 @@ export type ButtonProps = MuiButtonProps & {
   variant?: 'contained' | 'outlined' | 'text' | string;
 };
 
+const ButtonStyles = styled(MuiButton)<ButtonProps>(({ theme }) => ({
+  // Primary Button
+  '&.MuiButton-containedPrimary, &.MuiButton-contained': {
+    '&.Mui-focusVisible': {
+      backgroundColor: theme.palette.primary.dark,
+      outline: `0.1875rem solid ${theme.palette.primary.light}`,
+    },
+  },
+
+  // Secondary Button
+  '&.MuiButton-outlined, &.MuiButton-outlinedSecondary': {
+    '&:hover': {
+      color: theme.palette.common.white,
+      backgroundColor: theme.palette.secondary.dark,
+    },
+    '&.Mui-focusVisible': {
+      color: theme.palette.common.white,
+      backgroundColor: theme.palette.secondary.dark,
+      outline: `0.1875rem solid ${theme.palette.secondary.light}`,
+    },
+    '&:active': {
+      boxShadow: theme.shadows[6],
+    },
+  },
+
+  // Text Button
+  '&.MuiButton-text': {
+    '&:hover': {
+      color: theme.palette.common.white,
+      backgroundColor: theme.palette.primary.dark,
+    },
+    '&.Mui-focusVisible': {
+      color: theme.palette.common.white,
+      backgroundColor: theme.palette.primary.dark,
+      outline: `0.1875rem solid ${theme.palette.primary.light}`,
+    },
+    '&:active': {
+      boxShadow: theme.shadows[4],
+    },
+  },
+}));
+
 export function Button({
   children,
   color = 'primary',
@@ -43,13 +86,13 @@ export function Button({
   variant = 'contained',
 }: ButtonProps) {
   return (
-    <MuiButton
+    <ButtonStyles
       color={color}
       disabled={disabled}
       disableRipple={disableRipple}
       variant={color === 'primary' ? variant : 'outlined'}
     >
       {children}
-    </MuiButton>
+    </ButtonStyles>
   );
 }

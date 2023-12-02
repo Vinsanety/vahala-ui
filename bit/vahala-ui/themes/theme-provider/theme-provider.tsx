@@ -15,13 +15,15 @@ export type ThemeProviderProps = {
 
 const defaultTheme = createTheme({
   palette: {
+    mode: 'light',
     primary: {
-      main: '#FF5733',
+      main: '#3f51b5',
+      light: '#6573C3',
+      dark: '#2C387E',
+      contrastText: '#FFF',
     },
     secondary: {
-      main: '#E0C2FF',
-      light: '#F5EBFF',
-      contrastText: '#47008F',
+      main: '#9c27b0',
     },
   },
 });
