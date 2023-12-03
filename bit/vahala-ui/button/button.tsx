@@ -23,7 +23,7 @@ export type ButtonProps = MuiButtonProps & {
     | 'warning'
     | string;
   /**
-   * Disabled button prop
+   * Disabled button
    */
   disabled?: Boolean;
   /**
@@ -87,6 +87,7 @@ export function Button({
 }: ButtonProps) {
   return (
     <ButtonStyles
+      className="vuiButton"
       color={color}
       disabled={disabled}
       disableRipple={disableRipple}

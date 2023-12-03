@@ -1,0 +1,40 @@
+---
+description: An accessible and customizable Checkbox component.
+labels: ['vahala-ui', 'checkbox', 'a11y']
+---
+
+import { FormControl, FormGroup, FormLabel } from '@mui/material';
+import { ThemeProvider } from '@vahalawebdesign/vahala-ui.themes.theme-provider';
+import { Checkbox } from './checkbox';
+
+The `<Checkbox />` component extends the [MUI Checkbox](https://mui.com/material-ui/react-checkbox) including its theming, inline `sx` styling, and props.
+
+By default the `Checkbox` is wrapped with a `FormControlLabel` MUI component, which has the required the `label` prop. All checkboxes must have a label for accessibility compliance.
+
+In use, it's best practice to wrap the `Checkbox` component in MUI's `FormControl` and `FormGroup` components, as seen in the component usage below. To pass Checkbox Group label, use the MUI `FormLabel` component.
+
+The component is fully accessible and customizable: supporting mouse, keyboard, and touch interactions, focus behavior, and ARIA props.
+
+### Component usage
+
+```js
+<FormControl>
+  <FormLabel component="legend">Docs Checkbox Group</FormLabel>
+  <FormGroup>
+    <Checkbox label="Docs label" />
+  </FormGroup>
+</FormControl>
+```
+
+### Render Checkbox
+
+```js live
+<ThemeProvider>
+  <FormControl>
+    <FormLabel component="legend">Docs Checkbox Group</FormLabel>
+    <FormGroup>
+      <Checkbox label="Docs label" />
+    </FormGroup>
+  </FormControl>
+</ThemeProvider>
+```
