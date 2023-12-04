@@ -12,21 +12,21 @@
     "button": {
         "name": "button",
         "scope": "vahalawebdesign.vahala-ui",
-        "version": "0.0.11",
+        "version": "0.0.14",
         "mainFile": "index.ts",
         "rootDir": "vahala-ui/button"
     },
     "checkbox": {
         "name": "checkbox",
         "scope": "vahalawebdesign.vahala-ui",
-        "version": "0.0.3",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "vahala-ui/checkbox"
     },
     "themes/theme-provider": {
         "name": "themes/theme-provider",
         "scope": "vahalawebdesign.vahala-ui",
-        "version": "0.0.5",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "vahala-ui/themes/theme-provider"
     },

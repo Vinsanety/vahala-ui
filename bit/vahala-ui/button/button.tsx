@@ -43,11 +43,15 @@ const ButtonStyles = styled(MuiButton)<ButtonProps>(({ theme }) => ({
       backgroundColor: theme.palette.primary.dark,
       outline: `0.1875rem solid ${theme.palette.primary.light}`,
     },
+    '&:active': {
+      color: theme.palette.common.white,
+      backgroundColor: theme.palette.primary.dark,
+    },
   },
 
   // Secondary Button
   '&.MuiButton-outlined, &.MuiButton-outlinedSecondary': {
-    '@media (hover: hover)': {
+    '@media (pointer: fine)': {
       '&:hover': {
         color: theme.palette.common.white,
         backgroundColor: theme.palette.secondary.dark,
@@ -59,13 +63,15 @@ const ButtonStyles = styled(MuiButton)<ButtonProps>(({ theme }) => ({
       outline: `0.1875rem solid ${theme.palette.secondary.light}`,
     },
     '&:active': {
+      color: theme.palette.common.white,
+      backgroundColor: theme.palette.secondary.dark,
       boxShadow: theme.shadows[6],
     },
   },
 
   // Text Button
   '&.MuiButton-text': {
-    '@media (hover: hover)': {
+    '@media (pointer: fine)': {
       '&:hover': {
         color: theme.palette.common.white,
         backgroundColor: theme.palette.primary.dark,
@@ -77,6 +83,8 @@ const ButtonStyles = styled(MuiButton)<ButtonProps>(({ theme }) => ({
       outline: `0.1875rem solid ${theme.palette.primary.light}`,
     },
     '&:active': {
+      color: theme.palette.common.white,
+      backgroundColor: theme.palette.primary.dark,
       boxShadow: theme.shadows[4],
     },
   },
