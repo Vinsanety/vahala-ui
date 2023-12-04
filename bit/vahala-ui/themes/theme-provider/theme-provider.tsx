@@ -14,6 +14,7 @@ export type ThemeProviderProps = {
 };
 
 const defaultTheme = createTheme({
+  // ===Palette===
   palette: {
     mode: 'light',
     primary: {
@@ -24,6 +25,29 @@ const defaultTheme = createTheme({
     },
     secondary: {
       main: '#9c27b0',
+    },
+  },
+  // ===Typography===
+  typography: {
+    fontSize: 16,
+  },
+  // ===Components===
+  components: {
+    // =Form=
+    MuiFormLabel: {
+      styleOverrides: {
+        root: {
+          marginBottom: '1rem',
+        },
+      },
+    },
+    MuiFormHelperText: {
+      styleOverrides: {
+        root: {
+          marginTop: '0.75rem',
+          marginLeft: 0,
+        },
+      },
     },
   },
 });

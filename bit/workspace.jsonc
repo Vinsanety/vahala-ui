@@ -1,7 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://bit.dev/reference/workspace/workspace-json
- **/ {
+ **/{
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
   /**
    * main configuration of the Bit workspace.
@@ -70,13 +70,16 @@
         "eslint-plugin-jsx-a11y": "6.4.1",
         "eslint-plugin-mdx": "1.17.1",
         "eslint-plugin-react": "7.22.0",
-        "react": "^18.2.0"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
       },
       "peerDependencies": {
         "@emotion/react": "^11.11.1",
         "@emotion/styled": "^11.11.0",
         "@mui/material": "5.10.14",
-        "@testing-library/react": "^12.1.5"
+        "@testing-library/react": "^12.1.5",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
       }
     },
     "linkCoreAspects": true,
@@ -86,6 +89,8 @@
     "enableWorkspaceConfigWrite": true
   },
   "teambit.component/issues": {
-    "ignoreIssues": ["CircularDependencies"]
+    "ignoreIssues": [
+      "CircularDependencies"
+    ]
   }
 }

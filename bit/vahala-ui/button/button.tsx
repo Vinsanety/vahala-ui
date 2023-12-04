@@ -10,6 +10,7 @@ export type ButtonProps = MuiButtonProps & {
    * Children the Button; often the button label
    */
   children?: ReactNode;
+  onClick?: () => void;
   /**
    * Mui colors
    */
@@ -37,15 +38,25 @@ export type ButtonProps = MuiButtonProps & {
 };
 
 const ButtonStyles = styled(MuiButton)<ButtonProps>(({ theme }) => ({
+  fontSize: '1rem',
+  padding: '0.5625rem 1.5rem',
+  borderRadius: '0.325rem',
+  transition: 'all 0.4s ease',
+
   // Primary Button
   '&.MuiButton-containedPrimary, &.MuiButton-contained': {
+    '@media (pointer: fine)': {
+      '&:hover': {
+        boxShadow: theme.shadows[8],
+      },
+    },
     '&.Mui-focusVisible': {
       backgroundColor: theme.palette.primary.dark,
       outline: `0.1875rem solid ${theme.palette.primary.light}`,
     },
     '&:active': {
       color: theme.palette.common.white,
-      backgroundColor: theme.palette.primary.dark,
+      backgroundColor: theme.palette.primary.light,
     },
   },
 
@@ -85,13 +96,14 @@ const ButtonStyles = styled(MuiButton)<ButtonProps>(({ theme }) => ({
     '&:active': {
       color: theme.palette.common.white,
       backgroundColor: theme.palette.primary.dark,
-      boxShadow: theme.shadows[4],
+      boxShadow: theme.shadows[6],
     },
   },
 }));
 
 export function Button({
   children,
+  onClick,
   color = 'primary',
   disabled = false,
   disableRipple = true,
@@ -100,6 +112,7 @@ export function Button({
   return (
     <ButtonStyles
       className="vuiButton"
+      onClick={onClick}
       color={color}
       disabled={disabled}
       disableRipple={disableRipple}

@@ -11,9 +11,17 @@ export type CheckboxProps = MuiCheckboxProps & {
    */
   color?: 'primary' | 'error' | 'success';
   /**
-   * Requrired label, associated with the checkbox for a11y.
+   * Requrired label, associated with the checkbox for a11y
    */
   label: String;
+  /**
+   * Controlled checked boolean of checkbox
+   */
+  checked?: Boolean;
+  /**
+   * onChange handler
+   */
+  onChange?: Function;
   /**
    * Mui size
    */
@@ -25,7 +33,7 @@ export type CheckboxProps = MuiCheckboxProps & {
   /**
    * Indicates if required
    */
-  // required?: Boolean;
+  required?: Boolean;
   /**
    * Indicates if disabled
    */
@@ -64,9 +72,11 @@ const CheckboxStyles = styled(MuiCheckbox)<CheckboxProps>(({ theme }) => ({
 export function Checkbox({
   color = 'primary',
   label,
+  checked,
+  onChange,
   size = 'medium',
   defaultChecked = false,
-  // required,
+  required,
   disabled = false,
   disableRipple = true,
 }: CheckboxProps) {
@@ -74,8 +84,9 @@ export function Checkbox({
     <FormControlLabel
       className="vuiCheckbox"
       sx={{
+        mt: 0,
+        '&:not(:first-child)': { mt: '1.125rem' },
         ml: 0,
-        pt: 2.5,
         px: 0,
         '@media (hover: hover)': {
           '&:hover .MuiCheckbox-root:not(.Mui-disabled)': {
@@ -90,14 +101,15 @@ export function Checkbox({
         <CheckboxStyles
           color={color}
           label={label}
+          checked={checked}
+          onChange={onChange}
           size={size}
           defaultChecked={defaultChecked}
-          // required={required}
           disabled={disabled}
           disableRipple={disableRipple}
         />
       }
-      label={label}
+      label={required ? `${label}*` : label}
     />
   );
 }
