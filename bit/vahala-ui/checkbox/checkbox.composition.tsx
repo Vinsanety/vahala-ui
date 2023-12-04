@@ -7,7 +7,7 @@ export const BasicCheckbox = () => {
   return (
     <ThemeProvider>
       <FormControl>
-        <FormGroup sx={{ display: 'flex', flexFlow: 'column wrap', gap: 1 }}>
+        <FormGroup sx={{ display: 'flex', flexFlow: 'column wrap' }}>
           <Checkbox label="Checked" defaultChecked />
           <Checkbox label="Unchecked" />
           {/* <Checkbox required label="Required" /> */}
@@ -36,7 +36,7 @@ export const SuccessErrorCheckbox = () => {
   return (
     <ThemeProvider>
       <FormControl>
-        <FormGroup sx={{ display: 'flex', flexFlow: 'column wrap', gap: 1 }}>
+        <FormGroup sx={{ display: 'flex', flexFlow: 'column wrap' }}>
           <Checkbox color="error" label="Error" />
           <Checkbox color="success" label="Success" defaultChecked />
         </FormGroup>

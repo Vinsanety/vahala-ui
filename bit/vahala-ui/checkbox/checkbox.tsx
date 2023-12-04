@@ -42,8 +42,10 @@ const CheckboxStyles = styled(MuiCheckbox)<CheckboxProps>(({ theme }) => ({
   marginRight: '0.5rem',
   padding: 0,
   borderRadius: '0.25rem',
-  '&:hover': {
-    color: `${theme.palette.primary.dark}`,
+  '@media (hover: hover)': {
+    '&:hover': {
+      color: `${theme.palette.primary.dark}`,
+    },
   },
   '&.Mui-focusVisible, &.Mui-focusVisible.MuiCheckbox-colorError': {
     color: `${theme.palette.primary.dark}`,
@@ -73,10 +75,15 @@ export function Checkbox({
       className="vuiCheckbox"
       sx={{
         ml: 0,
-        pt: 2,
+        pt: 2.5,
         px: 0,
-        '&:hover .MuiCheckbox-root:not(.Mui-disabled)': {
-          color: `primary.dark`,
+        '@media (hover: hover)': {
+          '&:hover .MuiCheckbox-root:not(.Mui-disabled)': {
+            color: `primary.dark`,
+          },
+        },
+        '& .MuiFormControlLabel-label': {
+          fontSize: '1.125rem',
         },
       }}
       control={
