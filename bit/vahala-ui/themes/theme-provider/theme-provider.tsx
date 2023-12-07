@@ -33,14 +33,24 @@ const defaultTheme = createTheme({
   },
   // ===Components===
   components: {
-    // =Form=
+    // ##Form Label##
     MuiFormLabel: {
       styleOverrides: {
         root: {
-          marginBottom: '1rem',
+          marginBottom: '0.5rem',
         },
       },
     },
+    // ##Form Control Label (checkbox, radio)##
+    MuiFormControlLabel: {
+      styleOverrides: {
+        root: {
+          margin: 0,
+          padding: '0.5rem 1.5rem 0.5rem 0',
+        },
+      },
+    },
+    // ##Form Helper Text##
     MuiFormHelperText: {
       styleOverrides: {
         root: {

@@ -1,0 +1,50 @@
+---
+description: An accessible and customizable Radio component.
+labels: ['vahala-ui', 'Radio', 'a11y']
+---
+
+import { FormControl, RadioGroup, FormLabel } from '@mui/material';
+import { ThemeProvider } from '@vahalawebdesign/vahala-ui.themes.theme-provider';
+import { Radio } from './radio';
+
+The `<Radio />` component extends the [MUI Radio](https://mui.com/material-ui/react-radio) including its theming, inline `sx` styling, and props.
+
+By default the `Radio` is wrapped with a `FormControlLabel` MUI component, which has the required the `label` prop. All radios must have a label for accessibility compliance.
+
+The `Radio` must be used with at least one other `Radio` component, and should be wrapped by the `RadioGroup` component. To pass Radio Group label, use the MUI `FormLabel` component.
+
+The component is fully accessible and customizable: supporting mouse, keyboard, and touch interactions, focus behavior, and ARIA props.
+
+### Component usage
+
+```js
+<FormControl>
+  <FormLabel id="docs-radio-button-group-label">Docs Group</FormLabel>
+  <RadioGroup
+    aria-labelledby="docs-radio-button-group-label"
+    name="docs-radio-button-group"
+  >
+    <Radio label="Radio 1" value="1" />
+    <Radio label="Radio 2" value="2" />
+    <Radio label="Radio 3" value="3" />
+  </RadioGroup>
+</FormControl>
+```
+
+### Render Radio
+
+```js live
+<ThemeProvider>
+  <FormControl>
+    <FormLabel id="radio-button-group-label">Docs Group</FormLabel>
+    <RadioGroup
+      aria-labelledby="radio-button-group-label"
+      name="radio-button-group"
+    >
+      <Radio label="Radio 1" value="1" />
+      <Radio label="Radio 2" value="2" />
+      <Radio label="Radio 3" value="3" />
+    </RadioGroup>
+  </FormControl>
+</ThemeProvider>
+```

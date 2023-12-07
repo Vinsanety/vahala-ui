@@ -84,17 +84,10 @@ export function Checkbox({
     <FormControlLabel
       className="vuiCheckbox"
       sx={{
-        mt: 0,
-        '&:not(:first-child)': { mt: '1.125rem' },
-        ml: 0,
-        px: 0,
         '@media (hover: hover)': {
           '&:hover .MuiCheckbox-root:not(.Mui-disabled)': {
             color: `primary.dark`,
           },
-        },
-        '& .MuiFormControlLabel-label': {
-          fontSize: '1.125rem',
         },
       }}
       control={
