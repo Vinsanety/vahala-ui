@@ -88,10 +88,10 @@ export const RadioGroupRowError = () => {
   return (
     <ThemeProvider>
       <FormControl error={error}>
-        <FormLabel id="row-radio-group-label">Row Group</FormLabel>
+        <FormLabel id="error-row-radio-group-label">Row Group</FormLabel>
         <RadioGroup
-          aria-labelledby="row-radio-group-label"
-          name="row-radio-group"
+          aria-labelledby="error-row-radio-group-label"
+          name="error-row-radio-group"
           value={value}
           onChange={handleRadioChange}
           row
