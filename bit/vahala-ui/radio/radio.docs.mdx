@@ -7,13 +7,17 @@ import { FormControl, RadioGroup, FormLabel } from '@mui/material';
 import { ThemeProvider } from '@vahalawebdesign/vahala-ui.themes.theme-provider';
 import { Radio } from './radio';
 
-The `<Radio />` component extends the [MUI Radio](https://mui.com/material-ui/react-radio) including its theming, inline `sx` styling, and props.
+The `<Radio />` component extends the [MUI Radio](https://mui.com/material-ui/react-radio-button/) including its theming, inline `sx` styling, and props.
 
 By default the `Radio` is wrapped with a `FormControlLabel` MUI component, which has the required the `label` prop. All radios must have a label for accessibility compliance.
 
-The `Radio` must be used with at least one other `Radio` component, and should be wrapped by the `RadioGroup` component. To pass Radio Group label, use the MUI `FormLabel` component.
+The `Radio` needs to be a child of the `RadioGroup`, which must contain two or more radio children. The `RadioGroup` must also have an MUI `FormLabel`, which has an `id` that matches the `RadioGroup` `aria-labelledby` prop.
+
+#### Accessibility
 
 The component is fully accessible and customizable: supporting mouse, keyboard, and touch interactions, focus behavior, and ARIA props.
+
+For radio group a11y compliance and usage, visit [ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/patterns/radio/).
 
 ### Component usage
 

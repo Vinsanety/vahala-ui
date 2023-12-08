@@ -11,9 +11,13 @@ The `<Checkbox />` component extends the [MUI Checkbox](https://mui.com/material
 
 By default the `Checkbox` is wrapped with a `FormControlLabel` MUI component, which has the required the `label` prop. All checkboxes must have a label for accessibility compliance.
 
-In use, it's best practice to wrap the `Checkbox` component in MUI's `FormControl` and `FormGroup` components, as seen in the component usage below. To pass Checkbox Group label, use the MUI `FormLabel` component.
+It's best practice to wrap the `Checkbox` component in MUI's `FormControl` and `FormGroup` components, as seen in the component usage below. Each `FormGroup` must also have an MUI `FormLabel`.
+
+#### Accessibility
 
 The component is fully accessible and customizable: supporting mouse, keyboard, and touch interactions, focus behavior, and ARIA props.
+
+For checkbox a11y compliance and usage, visit [ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/).
 
 ### Component usage
 

@@ -18,13 +18,17 @@ const defaultTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#3f51b5',
-      light: '#6573C3',
       dark: '#2C387E',
+      main: '#3f51b5', // 500 (https://m2.material.io/inline-tools/color/)
+      light: '#6573C3',
+      100: '#c5cae9', // "Lightest"
       contrastText: '#FFF',
     },
     secondary: {
-      main: '#9c27b0',
+      dark: '#6D1B7B',
+      main: '#9c27b0', // 500 (https://m2.material.io/inline-tools/color/)
+      light: '#AF52BF',
+      100: '#e1bee7', // "Lightest"
     },
   },
   // ===Typography===

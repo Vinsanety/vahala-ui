@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {
   FormControl,
   RadioGroup,
@@ -29,11 +29,11 @@ export const BasicRadioGroup = () => {
 export const ErrorRadioGroup = () => {
   const [value, setValue] = React.useState('');
   const [error, setError] = React.useState(true);
-  const [helperText, setHelperText] = React.useState('Make a radio selection');
+  const [helperText, setHelperText] = React.useState('Make a selection');
 
   const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue((event.target as HTMLInputElement).value);
-    setHelperText('Radio selection made');
+    setHelperText('Selection made');
     setError(false);
   };
   return (
@@ -59,7 +59,7 @@ export const ErrorRadioGroup = () => {
 export const RadioGroupRow = () => {
   return (
     <ThemeProvider>
-      <FormControl>
+      <FormControl sx={{ minWidth: 350 }}>
         <FormLabel id="row-radio-group-label">Row Group</FormLabel>
         <RadioGroup
           aria-labelledby="row-radio-group-label"
@@ -78,16 +78,16 @@ export const RadioGroupRow = () => {
 export const RadioGroupRowError = () => {
   const [value, setValue] = React.useState('');
   const [error, setError] = React.useState(true);
-  const [helperText, setHelperText] = React.useState('Make a radio selection');
+  const [helperText, setHelperText] = React.useState('Make a selection');
 
   const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue((event.target as HTMLInputElement).value);
-    setHelperText('Radio selection made');
+    setHelperText('Selection made');
     setError(false);
   };
   return (
     <ThemeProvider>
-      <FormControl error={error}>
+      <FormControl error={error} sx={{ minWidth: 350 }}>
         <FormLabel id="error-row-radio-group-label">Row Group</FormLabel>
         <RadioGroup
           aria-labelledby="error-row-radio-group-label"

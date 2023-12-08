@@ -56,7 +56,7 @@ const CheckboxStyles = styled(MuiCheckbox)<CheckboxProps>(({ theme }) => ({
     },
   },
   '&.Mui-focusVisible, &.Mui-focusVisible.MuiCheckbox-colorError': {
-    color: `${theme.palette.primary.dark}`,
+    outline: `0.375rem solid ${theme.palette.primary[100]}`,
   },
   '&.MuiCheckbox-colorError': {
     color: `${theme.palette.error.main}`,

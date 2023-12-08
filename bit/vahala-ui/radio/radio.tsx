@@ -20,11 +20,14 @@ export type RadioProps = MuiRadioProps & {
   disableRipple?: Boolean;
 };
 
-const RadioStyles = styled(MuiRadio)<RadioProps>(() => ({
+const RadioStyles = styled(MuiRadio)<RadioProps>(({ theme }) => ({
   height: '1.75rem',
   width: '1.75rem',
   marginRight: '0.5rem',
   padding: 0,
+  '&.Mui-focusVisible': {
+    outline: `0.375rem solid ${theme.palette.primary[100]}`,
+  },
   '& .MuiSvgIcon-root': {
     fontSize: '2.25rem',
   },
