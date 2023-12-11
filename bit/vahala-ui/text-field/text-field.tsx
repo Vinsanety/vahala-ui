@@ -7,7 +7,10 @@ import {
 import { styled } from '@mui/material/styles';
 
 export type TextFieldProps = MuiTextFieldProps & {
-  // children?: ReactNode;
+  /**
+   * Textfield children are only present when using the `select` prop
+   */
+  children?: ReactNode;
   /**
    * Required input label
    */
@@ -16,16 +19,48 @@ export type TextFieldProps = MuiTextFieldProps & {
    * Displayed in the input before the user enters a value
    */
   placeholder?: String;
+  /**
+   * Default value for pre-filled inputs
+   */
   defaultValue?: String;
+  /**
+   * Helper text
+   */
   helperText?: String;
+  /**
+   * On change function to handle value changes to input
+   */
   onChange?: Function;
+  /**
+   * Multiline used for the textarea input
+   */
+  multiline?: Boolean;
+  /**
+   * Select used for the select input
+   */
+  select?: Boolean;
+  /**
+   * Mui prop distinguishing if full width of container
+   */
+  fullWidth?: Boolean;
+  /**
+   * Focused boolean
+   */
   focused?: Boolean;
+  /**
+   * Disabled boolean
+   */
   disabled?: Boolean;
-  Error?: Boolean;
+  /**
+   * Error boolean to be triggered when validations are not met
+   */
+  error?: Boolean;
 };
 
 const TextFieldStyles = styled(MuiTextField)<TextFieldProps>(({ theme }) => ({
+  // TextField Wrapper
   marginTop: theme.spacing(4),
+  // Label
   '.MuiFormLabel-root': {
     fontSize: '1.375rem',
     marginTop: theme.spacing(-4),
@@ -34,6 +69,7 @@ const TextFieldStyles = styled(MuiTextField)<TextFieldProps>(({ theme }) => ({
       textTransform: 'capitalize',
     },
   },
+  // Input
   '.MuiInputBase-root.MuiFilledInput-root': {
     backgroundColor: 'transparent',
     border: `0.125rem solid ${theme.palette.grey[500]}`,
@@ -69,18 +105,32 @@ const TextFieldStyles = styled(MuiTextField)<TextFieldProps>(({ theme }) => ({
         border: `0.125rem solid ${theme.palette.error.main}`,
       },
     },
+    // Textarea
+    '&.MuiInputBase-multiline': {
+      padding: theme.spacing(2),
+    },
   },
+  // Select
+  '.MuiSelect-select': {
+    backgroundColor: 'transparent',
+    padding: '1rem',
+  },
+  // HelperText
   '.MuiFormHelperText-root': {
     margin: '0.25rem 0 0 0.25rem',
   },
 }));
 
 export function TextField({
+  children,
   label,
   placeholder,
   defaultValue,
   helperText,
   onChange,
+  multiline,
+  select,
+  fullWidth,
   focused,
   disabled,
   error,
@@ -92,11 +142,17 @@ export function TextField({
       defaultValue={defaultValue}
       placeholder={placeholder}
       helperText={helperText}
+      multiline={multiline}
+      select={select}
+      fullWidth={fullWidth}
+      rows={multiline && 4}
       onChange={onChange}
       focused={focused}
       disabled={disabled}
       error={error}
       InputLabelProps={{ shrink: true }}
-    />
+    >
+      {children}
+    </TextFieldStyles>
   );
 }
