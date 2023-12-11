@@ -7,7 +7,7 @@ import { styled } from '@mui/material/styles';
 
 export type RadioProps = MuiRadioProps & {
   /**
-   * Requrired label, associated with the checkbox for a11y
+   * Required label, associated with the checkbox for a11y
    */
   label: String;
   /**
