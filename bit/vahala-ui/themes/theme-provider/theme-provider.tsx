@@ -60,6 +60,7 @@ const defaultTheme = createTheme({
         root: {
           marginTop: '0.75rem',
           marginLeft: 0,
+          letterSpacing: 0,
         },
       },
     },

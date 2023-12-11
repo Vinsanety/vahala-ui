@@ -1,16 +1,31 @@
 ---
-description: A TextField component.
+description: An accessible and customizable TextField component that includes the input, select, and textarea components.
+labels: ['vahala-ui', 'textfield', 'a11y']
 ---
 
+import { ThemeProvider } from '@vahalawebdesign/vahala-ui.themes.theme-provider';
 import { TextField } from './text-field';
 
+The `<TextField />` component extends the [MUI TextField](https://mui.com/material-ui/react-textfield) including its theming, inline `sx` styling, and props.
+
+#### Accessibility
+
+The component is fully accessible and customizable: supporting mouse, keyboard, and touch interactions, focus behavior, and ARIA props.
+
 ### Component usage
+
 ```js
-<TextField>Hello world!</TextField>
+<TextField label="Docs label" />
 ```
 
-### Render hello world!
+### Render TextField
 
 ```js live
-<TextField>Hello world!</TextField>
+<ThemeProvider>
+  <TextField
+    label="Docs label"
+    placeholder="Docs placeholder"
+    helperText="Docs helper text"
+  />
+</ThemeProvider>
 ```
