@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import {
   ToggleButton as MuiToggleButton,
   ToggleButtonProps as MuiToggleButtonProps,
@@ -5,6 +6,10 @@ import {
 import { styled } from '@mui/material/styles';
 
 export type ToggleButtonProps = MuiToggleButtonProps & {
+  /**
+   * Children the Button; often the button label
+   */
+  children?: ReactNode;
   /**
    * Required. The value to associate with the button when selected in a ToggleButtonGroup
    */

@@ -20,9 +20,6 @@ importers:
       '@mdx-js/react':
         specifier: 1.6.22
         version: 1.6.22(react@18.2.0)
-      '@mui/icons-material':
-        specifier: ^5.14.18
-        version: 5.14.18(@mui/material@5.10.14)(@types/react@18.2.23)(react@18.2.0)
       '@mui/material':
         specifier: 5.10.14
         version: 5.10.14(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.23)(react-dom@18.2.0)(react@18.2.0)
@@ -96,6 +93,9 @@ importers:
       '@bitdev/react.react-env':
         specifier: 1.1.4
         version: 1.1.4(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@16.18.44)
+      '@mui/icons-material':
+        specifier: ^5.14.18
+        version: 5.14.18(@mui/material@5.10.14)(@types/react@18.2.23)(react@18.2.0)
       '@testing-library/react':
         specifier: ^13.4.0
         version: 13.4.0(react-dom@18.2.0)(react@18.2.0)
@@ -138,6 +138,9 @@ importers:
       '@vahalawebdesign/vahala-ui.themes.theme-provider':
         specifier: workspace:*
         version: file:vahala-ui/themes/theme-provider(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
+      '@vahalawebdesign/vahala-ui.toggle-button':
+        specifier: workspace:*
+        version: file:vahala-ui/toggle-button(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
       browserslist:
         specifier: 4.21.4
         version: 4.21.4
@@ -187,6 +190,8 @@ importers:
       '@vahalawebdesign/vahala-ui.text-field':
         injected: true
       '@vahalawebdesign/vahala-ui.themes.theme-provider':
+        injected: true
+      '@vahalawebdesign/vahala-ui.toggle-button':
         injected: true
 
   node_modules/.bit_roots/bitdev.react_react-env@1.1.4:
@@ -224,6 +229,9 @@ importers:
       '@vahalawebdesign/vahala-ui.themes.theme-provider':
         specifier: workspace:*
         version: file:vahala-ui/themes/theme-provider(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
+      '@vahalawebdesign/vahala-ui.toggle-button':
+        specifier: workspace:*
+        version: file:vahala-ui/toggle-button(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
       browserslist:
         specifier: 4.21.4
         version: 4.21.4
@@ -273,6 +281,8 @@ importers:
       '@vahalawebdesign/vahala-ui.text-field':
         injected: true
       '@vahalawebdesign/vahala-ui.themes.theme-provider':
+        injected: true
+      '@vahalawebdesign/vahala-ui.toggle-button':
         injected: true
 
   vahala-ui/button:
@@ -618,6 +628,79 @@ importers:
       '@bitdev/react.react-env':
         specifier: 1.1.4
         version: 1.1.4(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@16.18.44)
+      '@testing-library/react':
+        specifier: ^13.4.0
+        version: 13.4.0(react-dom@18.2.0)(react@18.2.0)
+      '@types/testing-library__jest-dom':
+        specifier: ^5.9.5
+        version: 5.9.5
+
+  vahala-ui/toggle-button:
+    dependencies:
+      '@mdx-js/react':
+        specifier: 1.6.22
+        version: 1.6.22(react@18.2.0)
+      '@mui/material':
+        specifier: 5.10.14
+        version: 5.10.14(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.23)(react-dom@18.2.0)(react@18.2.0)
+      '@teambit/mdx.ui.mdx-scope-context':
+        specifier: 1.0.0
+        version: 1.0.0(react-dom@18.2.0)(react@18.2.0)
+      '@types/jest':
+        specifier: ^29.2.2
+        version: 29.5.10
+      '@types/react':
+        specifier: 18.2.23
+        version: 18.2.23
+      '@types/react-dom':
+        specifier: ^18.2.5
+        version: 18.2.17
+      browserslist:
+        specifier: 4.21.4
+        version: 4.21.4
+      eslint-plugin-import:
+        specifier: 2.22.1
+        version: 2.22.1(eslint@7.32.0)
+      eslint-plugin-jest:
+        specifier: 24.1.5
+        version: 24.1.5(eslint@7.32.0)(typescript@5.1.3)
+      eslint-plugin-jsx-a11y:
+        specifier: 6.4.1
+        version: 6.4.1(eslint@7.32.0)
+      eslint-plugin-mdx:
+        specifier: 1.13.0
+        version: 1.13.0(eslint@7.32.0)
+      eslint-plugin-react:
+        specifier: 7.22.0
+        version: 7.22.0(eslint@7.32.0)
+      eslint-plugin-react-hooks:
+        specifier: 4.2.0
+        version: 4.2.0(eslint@7.32.0)
+      graphql:
+        specifier: 15.8.0
+        version: 15.8.0
+      jest:
+        specifier: 29.3.1
+        version: 29.3.1(@types/node@16.18.44)
+      pino-pretty:
+        specifier: 4.5.0
+        version: 4.5.0
+      react:
+        specifier: ^18.0.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.0.0
+        version: 18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: ^6.16.0
+        version: 6.20.0(react-dom@18.2.0)(react@18.2.0)
+    devDependencies:
+      '@bitdev/react.react-env':
+        specifier: 1.1.4
+        version: 1.1.4(@teambit/legacy@node_modules+@teambit+legacy)(@testing-library/react@13.4.0)(@types/node@16.18.44)
+      '@mui/icons-material':
+        specifier: ^5.14.18
+        version: 5.14.18(@mui/material@5.10.14)(@types/react@18.2.23)(react@18.2.0)
       '@testing-library/react':
         specifier: ^13.4.0
         version: 13.4.0(react-dom@18.2.0)(react@18.2.0)
@@ -5003,7 +5086,6 @@ packages:
       find-root: 1.1.0
       source-map: 0.5.7
       stylis: 4.2.0
-    dev: false
 
   /@emotion/cache@11.11.0:
     resolution: {integrity: sha512-P34z9ssTCBi3e9EI1ZsWpNHcfY1r09ZO0rZbRO2ob3ZQMnFI35jB536qoXbkdesr5EUhYi22anuEJuyxifaqAQ==}
@@ -5013,7 +5095,6 @@ packages:
       '@emotion/utils': 1.2.1
       '@emotion/weak-memoize': 0.3.1
       stylis: 4.2.0
-    dev: false
 
   /@emotion/core@11.0.0:
     resolution: {integrity: sha512-w4sE3AmHmyG6RDKf6mIbtHpgJUSJ2uGvPQb8VXFL7hFjMPibE8IiehG8cMX3Ztm4svfCQV6KqusQbeIOkurBcA==}
@@ -5021,17 +5102,14 @@ packages:
 
   /@emotion/hash@0.9.1:
     resolution: {integrity: sha512-gJB6HLm5rYwSLI6PQa+X1t5CFGrv1J1TWG+sOyMCeKz2ojaj6Fnl/rZEspogG+cvqbt4AE/2eIyD2QfLKTBNlQ==}
-    dev: false
 
   /@emotion/is-prop-valid@1.2.1:
     resolution: {integrity: sha512-61Mf7Ufx4aDxx1xlDeOm8aFFigGHE4z+0sKCa+IHCeZKiyP9RLD0Mmx7m8b9/Cf37f7NAvQOOJAbQQGVr5uERw==}
     dependencies:
       '@emotion/memoize': 0.8.1
-    dev: false
 
   /@emotion/memoize@0.8.1:
     resolution: {integrity: sha512-W2P2c/VRW1/1tLox0mVUalvnWXxavmv/Oum2aPsRcoDJuob75FC3Y8FbpfLwUegRcxINtGUMPq0tFCvYNTBXNA==}
-    dev: false
 
   /@emotion/react@11.11.1(@types/react@18.2.23)(react@18.2.0):
     resolution: {integrity: sha512-5mlW1DquU5HaxjLkfkGN1GA/fvVGdyHURRiX/0FHl2cfIfRxSOfmxEH5YS43edp0OldZrZ+dkBKbngxcNCdZvA==}
@@ -5054,7 +5132,6 @@ packages:
       '@types/react': 18.2.23
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
-    dev: false
 
   /@emotion/serialize@1.1.2:
     resolution: {integrity: sha512-zR6a/fkFP4EAcCMQtLOhIgpprZOwNmCldtpaISpvz348+DP4Mz8ZoKaGGCQpbzepNIUWbq4w6hNZkwDyKoS+HA==}
@@ -5064,11 +5141,9 @@ packages:
       '@emotion/unitless': 0.8.1
       '@emotion/utils': 1.2.1
       csstype: 3.1.2
-    dev: false
 
   /@emotion/sheet@1.2.2:
     resolution: {integrity: sha512-0QBtGvaqtWi+nx6doRwDdBIzhNdZrXUppvTM4dtZZWEGTXL/XE/yJxLMGlDT1Gt+UHH5IX1n+jkXyytE/av7OA==}
-    dev: false
 
   /@emotion/styled@11.11.0(@emotion/react@11.11.1)(@types/react@18.2.23)(react@18.2.0):
     resolution: {integrity: sha512-hM5Nnvu9P3midq5aaXj4I+lnSfNi7Pmd4EWk1fOZ3pxookaQTNew6bp4JaCBYM4HVFZF9g7UjJmsUmC2JlxOng==}
@@ -5093,11 +5168,9 @@ packages:
       '@emotion/utils': 1.2.1
       '@types/react': 18.2.23
       react: 18.2.0
-    dev: false
 
   /@emotion/unitless@0.8.1:
     resolution: {integrity: sha512-KOEGMu6dmJZtpadb476IsZBclKvILjopjUii3V+7MnXIQCYh8W3NgNcgwo21n9LXZX6EDIKvqfjYxXebDwxKmQ==}
-    dev: false
 
   /@emotion/use-insertion-effect-with-fallbacks@1.0.1(react@18.2.0):
     resolution: {integrity: sha512-jT/qyKZ9rzLErtrjGgdkMBn2OP8wl0G3sQlBb3YPryvKHsjvINUhVaPFfP+fpBcOkmrVOVEEHQFJ7nbj2TH2gw==}
@@ -5108,15 +5181,12 @@ packages:
         optional: true
     dependencies:
       react: 18.2.0
-    dev: false
 
   /@emotion/utils@1.2.1:
     resolution: {integrity: sha512-Y2tGf3I+XVnajdItskUCn6LX+VUDmP6lTL4fcqsXAv43dnlbZiuW4MWQW38rW/BVWSE7Q/7+XQocmpnRYILUmg==}
-    dev: false
 
   /@emotion/weak-memoize@0.3.1:
     resolution: {integrity: sha512-EsBwpc7hBUJWAsNPBmJy4hxWx12v6bshQsldrVmjxJoc3isbxhOrF2IcCpaXxfvq03NwkI7sbsOLXbYuqF/8Ww==}
-    dev: false
 
   /@esbuild/android-arm64@0.18.20:
     resolution: {integrity: sha512-Nz4rJcchGDtENV0eMKUNa6L12zz2zBDXuhj/Vjh18zGqB44Bi7MBMSXjgunJgjRhCmKOjnPuZp4Mb6OKqtMHLQ==}
@@ -5844,11 +5914,9 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-is: 18.2.0
-    dev: false
 
   /@mui/core-downloads-tracker@5.14.18:
     resolution: {integrity: sha512-yFpF35fEVDV81nVktu0BE9qn2dD/chs7PsQhlyaV3EnTeZi9RZBuvoEfRym1/jmhJ2tcfeWXiRuHG942mQXJJQ==}
-    dev: false
 
   /@mui/icons-material@5.14.18(@mui/material@5.10.14)(@types/react@18.2.23)(react@18.2.0):
     resolution: {integrity: sha512-o2z49R1G4SdBaxZjbMmkn+2OdT1bKymLvAYaB6pH59obM1CYv/0vAVm6zO31IqhwtYwXv6A7sLIwCGYTaVkcdg==}
@@ -5869,7 +5937,7 @@ packages:
       '@mui/material': 5.10.14(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.23)(react-dom@18.2.0)(react@18.2.0)
       '@types/react': 18.2.23
       react: 18.2.0
-    dev: false
+    dev: true
 
   /@mui/material@5.10.14(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.23)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-HWzKVAykePMx54WtxVwZyL1W4k3xlHYIqwMw0CaXAvgB3UE9yjABZuuGr8vG5Z6CSNWamzd+s1x8u7pQPFl9og==}
@@ -5909,7 +5977,6 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
       react-is: 18.2.0
       react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.2.0)
-    dev: false
 
   /@mui/private-theming@5.14.18(@types/react@18.2.23)(react@18.2.0):
     resolution: {integrity: sha512-WSgjqRlzfHU+2Rou3HlR2Gqfr4rZRsvFgataYO3qQ0/m6gShJN+lhVEvwEiJ9QYyVzMDvNpXZAcqp8Y2Vl+PAw==}
@@ -5928,7 +5995,6 @@ packages:
       '@types/react': 18.2.23
       prop-types: 15.8.1
       react: 18.2.0
-    dev: false
 
   /@mui/styled-engine@5.14.18(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0):
     resolution: {integrity: sha512-pW8bpmF9uCB5FV2IPk6mfbQCjPI5vGI09NOLhtGXPeph/4xIfC3JdIX0TILU0WcTs3aFQqo6s2+1SFgIB9rCXA==}
@@ -5952,7 +6018,6 @@ packages:
       csstype: 3.1.2
       prop-types: 15.8.1
       react: 18.2.0
-    dev: false
 
   /@mui/system@5.14.18(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.23)(react@18.2.0):
     resolution: {integrity: sha512-hSQQdb3KF72X4EN2hMEiv8EYJZSflfdd1TRaGPoR7CIAG347OxCslpBUwWngYobaxgKvq6xTrlIl+diaactVww==}
@@ -5984,7 +6049,6 @@ packages:
       csstype: 3.1.2
       prop-types: 15.8.1
       react: 18.2.0
-    dev: false
 
   /@mui/types@7.2.9(@types/react@18.2.23):
     resolution: {integrity: sha512-k1lN/PolaRZfNsRdAqXtcR71sTnv3z/VCCGPxU8HfdftDkzi335MdJ6scZxvofMAd/K/9EbzCZTFBmlNpQVdCg==}
@@ -5995,7 +6059,6 @@ packages:
         optional: true
     dependencies:
       '@types/react': 18.2.23
-    dev: false
 
   /@mui/utils@5.14.18(@types/react@18.2.23)(react@18.2.0):
     resolution: {integrity: sha512-HZDRsJtEZ7WMSnrHV9uwScGze4wM/Y+u6pDVo+grUjt5yXzn+wI8QX/JwTHh9YSw/WpnUL80mJJjgCnWj2VrzQ==}
@@ -6015,7 +6078,6 @@ packages:
       prop-types: 15.8.1
       react: 18.2.0
       react-is: 18.2.0
-    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -6165,7 +6227,6 @@ packages:
 
   /@popperjs/core@2.11.8:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
-    dev: false
 
   /@prerenderer/prerenderer@1.2.3:
     resolution: {integrity: sha512-ildOGNPo6vg2SNSBd/wjTljem98BJ0bzgCFcHL0SZEgTf9c26ucTvreZnGgqrqZ+lpiYb6c4RbPABvZW69x6lw==}
@@ -9389,7 +9450,6 @@ packages:
     resolution: {integrity: sha512-ZVNmWumUIh5NhH8aMD9CR2hdW0fNuYInlocZHaZ+dgk/1K49j1w/HoAuK1ki+pgscQrOFRTlXeoURtuzEkV3dg==}
     dependencies:
       '@types/react': 18.2.23
-    dev: false
 
   /@types/react@18.2.23:
     resolution: {integrity: sha512-qHLW6n1q2+7KyBEYnrZpcsAmU/iiCh9WGCKgXvMxx89+TYdJWRjZohVIo9XTcoLhfX3+/hP0Pbulu3bCZQ9PSA==}
@@ -10947,12 +11007,10 @@ packages:
   /clsx@1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
     engines: {node: '>=6'}
-    dev: false
 
   /clsx@2.0.0:
     resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
     engines: {node: '>=6'}
-    dev: false
 
   /co@4.6.0:
     resolution: {integrity: sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==}
@@ -12018,7 +12076,6 @@ packages:
     dependencies:
       '@babel/runtime': 7.23.4
       csstype: 3.1.2
-    dev: false
 
   /dom-serializer@1.4.1:
     resolution: {integrity: sha512-VHwB3KfrcOOkelEG2ZOfxqLZdfkil8PtJi4P8N2MMXucZq2yLp75ClViUlOVwyoHEDjYU433Aq+5zWP61+RGag==}
@@ -13892,7 +13949,6 @@ packages:
     resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
     dependencies:
       react-is: 16.13.1
-    dev: false
 
   /hosted-git-info@2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
@@ -17743,7 +17799,6 @@ packages:
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-    dev: false
 
   /react-use-dimensions@1.2.1(@types/react@18.2.23)(react@18.2.0)(typescript@5.1.3):
     resolution: {integrity: sha512-XL+Rup9Hosxx3Ap9xpyQMbVwuUa4BSqiOjfBb2zDuGs4uv2FesFV+m8Z/huRx2BNptMd9ARPqFuSNA62zhCozg==}
@@ -18745,7 +18800,6 @@ packages:
 
   /stylis@4.2.0:
     resolution: {integrity: sha512-Orov6g6BB1sDfYgzWfTHDOxamtX1bE/zo104Dh9e6fqJ3PooipYyfJ0pUmrZO2wAvO8YbEyeFrkV91XTsGMSrw==}
-    dev: false
 
   /sucrase@3.34.0:
     resolution: {integrity: sha512-70/LQEZ07TEcxiU2dz51FKaE6hCTWC6vr7FOk3Gr0U60C3shtAN+H+BFr9XlYe5xqf3RA8nrc+VIwzCfnxuXJw==}
@@ -20491,6 +20545,7 @@ packages:
       '@types/jest': 29.5.10
       '@types/react': 18.2.23
       '@types/react-dom': 18.2.17
+      '@vahalawebdesign/vahala-ui.themes.theme-provider': file:vahala-ui/themes/theme-provider(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
       browserslist: 4.21.4
       eslint-plugin-import: 2.22.1(eslint@7.32.0)
       eslint-plugin-jest: 24.1.5(eslint@7.32.0)(typescript@5.1.3)
@@ -20537,6 +20592,52 @@ packages:
       '@types/react': 18.2.23
       '@types/react-dom': 18.2.17
       '@vahalawebdesign/vahala-ui.button': file:vahala-ui/button(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
+      browserslist: 4.21.4
+      eslint-plugin-import: 2.22.1(eslint@7.32.0)
+      eslint-plugin-jest: 24.1.5(eslint@7.32.0)(typescript@5.1.3)
+      eslint-plugin-jsx-a11y: 6.4.1(eslint@7.32.0)
+      eslint-plugin-mdx: 1.13.0(eslint@7.32.0)
+      eslint-plugin-react: 7.22.0(eslint@7.32.0)
+      eslint-plugin-react-hooks: 4.2.0(eslint@7.32.0)
+      graphql: 15.8.0
+      jest: 29.3.1(@types/node@16.18.44)
+      pino-pretty: 4.5.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-router-dom: 6.20.0(react-dom@18.2.0)(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/node'
+      - '@typescript-eslint/parser'
+      - babel-plugin-macros
+      - eslint
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - node-notifier
+      - supports-color
+      - ts-node
+      - typescript
+    dev: false
+
+  file:vahala-ui/toggle-button(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0):
+    resolution: {directory: vahala-ui/toggle-button, type: directory}
+    id: file:vahala-ui/toggle-button
+    name: '@vahalawebdesign/vahala-ui.toggle-button'
+    peerDependencies:
+      '@mui/material': '*'
+      react: '*'
+    peerDependenciesMeta:
+      '@mui/material':
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      '@mdx-js/react': 1.6.22(react@18.2.0)
+      '@mui/material': 5.10.14(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.23)(react-dom@18.2.0)(react@18.2.0)
+      '@teambit/mdx.ui.mdx-scope-context': 1.0.0(react-dom@18.2.0)(react@18.2.0)
+      '@types/jest': 29.5.10
+      '@types/react': 18.2.23
+      '@types/react-dom': 18.2.17
+      '@vahalawebdesign/vahala-ui.themes.theme-provider': file:vahala-ui/themes/theme-provider(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
       browserslist: 4.21.4
       eslint-plugin-import: 2.22.1(eslint@7.32.0)
       eslint-plugin-jest: 24.1.5(eslint@7.32.0)(typescript@5.1.3)
