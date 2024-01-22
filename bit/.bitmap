@@ -33,7 +33,7 @@
     "text-field": {
         "name": "text-field",
         "scope": "vahalawebdesign.vahala-ui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "vahala-ui/text-field"
     },

@@ -9,6 +9,7 @@ export const BasicTextField = () => {
     <ThemeProvider>
       <Box sx={{ mx: 2 }}>
         <TextField
+          id="basic-text-field"
           label="Label"
           placeholder="Placeholder"
           helperText="Helper text"
@@ -24,13 +25,20 @@ export const TextFieldStates = () => {
     <ThemeProvider>
       <Box sx={{ mx: 2, display: 'flex', flexDirection: 'column', gap: 2 }}>
         <TextField
+          id="text-field-focused-state"
           focused
           label="Focused"
           placeholder="Focused"
           defaultValue="Focused"
         />
-        <TextField label="Disabled" placeholder="Disabled" disabled />
         <TextField
+          id="text-field-disabled-state"
+          label="Disabled"
+          placeholder="Disabled"
+          disabled
+        />
+        <TextField
+          id="text-field-error-state"
           label="Error"
           placeholder="Error"
           value={value}
@@ -47,7 +55,12 @@ export const TextareaTextField = () => {
   return (
     <ThemeProvider>
       <Box sx={{ mx: 2 }}>
-        <TextField label="Textarea" placeholder="Placeholder" multiline />
+        <TextField
+          id="textarea-text-field"
+          label="Textarea"
+          placeholder="Placeholder"
+          multiline
+        />
       </Box>
     </ThemeProvider>
   );
@@ -68,8 +81,10 @@ export const SelectTextField = () => {
     <ThemeProvider>
       <Box sx={{ mx: 2, width: 250 }}>
         <TextField
+          id="select-text-field"
           label="Select"
           select
+          defaultValue="option1"
           value={selectedOption}
           onChange={handleChange}
           fullWidth

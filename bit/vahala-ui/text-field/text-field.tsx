@@ -12,6 +12,10 @@ export type TextFieldProps = MuiTextFieldProps & {
    */
   children?: ReactNode;
   /**
+   * HTML id attribute
+   */
+  id?: String;
+  /**
    * Required input label
    */
   label: ReactNode;
@@ -77,6 +81,7 @@ const TextFieldStyles = styled(MuiTextField)<TextFieldProps>(({ theme }) => ({
     input: {
       padding: theme.spacing(2),
       '&.Mui-focused': {
+        backgroundColor: 'transparent',
         borderColor: theme.palette.primary.main,
       },
     },
@@ -114,6 +119,9 @@ const TextFieldStyles = styled(MuiTextField)<TextFieldProps>(({ theme }) => ({
   '.MuiSelect-select': {
     backgroundColor: 'transparent',
     padding: '1rem',
+    '.Mui-focused': {
+      backgroundColor: 'transparent',
+    },
   },
   // HelperText
   '.MuiFormHelperText-root': {
@@ -123,6 +131,7 @@ const TextFieldStyles = styled(MuiTextField)<TextFieldProps>(({ theme }) => ({
 
 export function TextField({
   children,
+  id,
   label,
   placeholder,
   defaultValue,
@@ -137,6 +146,7 @@ export function TextField({
 }: TextFieldProps) {
   return (
     <TextFieldStyles
+      id={id}
       variant="filled"
       label={label}
       defaultValue={defaultValue}
