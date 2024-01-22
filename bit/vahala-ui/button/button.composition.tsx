@@ -6,7 +6,12 @@ import { Button } from './button';
 export const PrimaryButton = () => {
   return (
     <ThemeProvider>
-      <Button onClick={() => alert('Primary button clicked')}>Primary</Button>
+      <Button
+        id="primary-button"
+        onClick={() => alert('Primary button clicked')}
+      >
+        Primary
+      </Button>
     </ThemeProvider>
   );
 };
@@ -15,6 +20,7 @@ export const SecondaryButton = () => {
   return (
     <ThemeProvider>
       <Button
+        id="secondary-button"
         onClick={() => alert('Secondary button clicked')}
         color="secondary"
       >
@@ -27,7 +33,9 @@ export const SecondaryButton = () => {
 export const PrimaryDisabledButton = () => {
   return (
     <ThemeProvider>
-      <Button disabled>Disabled</Button>
+      <Button id="primary-disabled-button" disabled>
+        Disabled
+      </Button>
     </ThemeProvider>
   );
 };
@@ -35,7 +43,11 @@ export const PrimaryDisabledButton = () => {
 export const TextButton = () => {
   return (
     <ThemeProvider>
-      <Button onClick={() => alert('Text button clicked')} variant="text">
+      <Button
+        id="text-button"
+        onClick={() => alert('Text button clicked')}
+        variant="text"
+      >
         Text
       </Button>
     </ThemeProvider>

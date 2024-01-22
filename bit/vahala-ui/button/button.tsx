@@ -10,6 +10,13 @@ export type ButtonProps = MuiButtonProps & {
    * Children the Button; often the button label
    */
   children?: ReactNode;
+  /**
+   * HTML id attribute
+   */
+  id?: String;
+  /**
+   * onClick handler
+   */
   onClick?: () => void;
   /**
    * Mui colors
@@ -100,6 +107,7 @@ const ButtonStyles = styled(MuiButton)<ButtonProps>(({ theme }) => ({
 
 export function Button({
   children,
+  id,
   onClick,
   color = 'primary',
   disabled = false,
@@ -108,6 +116,7 @@ export function Button({
 }: ButtonProps) {
   return (
     <ButtonStyles
+      id={id}
       className="vuiButton"
       onClick={onClick}
       color={color}

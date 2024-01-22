@@ -81,7 +81,6 @@ const TextFieldStyles = styled(MuiTextField)<TextFieldProps>(({ theme }) => ({
     input: {
       padding: theme.spacing(2),
       '&.Mui-focused': {
-        backgroundColor: 'transparent',
         borderColor: theme.palette.primary.main,
       },
     },
@@ -119,7 +118,7 @@ const TextFieldStyles = styled(MuiTextField)<TextFieldProps>(({ theme }) => ({
   '.MuiSelect-select': {
     backgroundColor: 'transparent',
     padding: '1rem',
-    '.Mui-focused': {
+    '&.MuiSelect-filled.MuiInputBase-input.MuiFilledInput-input:focus': {
       backgroundColor: 'transparent',
     },
   },
