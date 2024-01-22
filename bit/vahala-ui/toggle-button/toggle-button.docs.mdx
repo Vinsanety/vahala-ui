@@ -1,0 +1,49 @@
+---
+description: An accessible and customizable Toggle Button component.
+labels: ['vahala-ui', 'textfield', 'a11y']
+---
+
+import TaskIcon from '@mui/icons-material/Task';
+import { ThemeProvider } from '@vahalawebdesign/vahala-ui.themes.theme-provider';
+import { ToggleButton } from './toggle-button';
+
+The `<ToggleButton />` component extends the [MUI ToggleButton](https://mui.com/material-ui/react-toggle-button) including its theming, inline `sx` styling, and props.
+
+#### Accessibility
+
+The component is fully accessible and customizable: supporting mouse, keyboard, and touch interactions, focus behavior, and ARIA props.
+
+### Component usage
+
+```js
+<ToggleButton
+  value="Docs"
+  selected={selected}
+  onChange={() => {
+    setSelected(!selected);
+  }}
+>
+  <ExampleIcon />
+</ToggleButton>
+```
+
+### Render ToggleButton
+
+```js live
+() => {
+  const [selected, setSelected] = React.useState(false);
+  return (
+    <ThemeProvider>
+      <ToggleButton
+        value="Task"
+        selected={selected}
+        onChange={() => {
+          setSelected(!selected);
+        }}
+      >
+        <TaskIcon />
+      </ToggleButton>
+    </ThemeProvider>
+  );
+};
+```
