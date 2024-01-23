@@ -1,6 +1,6 @@
 # vahala-ui
 
-An extensible ReactJS component library built with bit.cloud.
+An extensible React component library built with bit.cloud.
 
 ### Visit the library:
 
