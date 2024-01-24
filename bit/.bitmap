@@ -40,7 +40,7 @@
     "text-field": {
         "name": "text-field",
         "scope": "vahalawebdesign.vahala-ui",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "vahala-ui/text-field"
     },
@@ -54,7 +54,7 @@
     "toggle-button": {
         "name": "toggle-button",
         "scope": "vahalawebdesign.vahala-ui",
-        "version": "0.0.3",
+        "version": "0.0.4",
         "mainFile": "index.ts",
         "rootDir": "vahala-ui/toggle-button"
     },

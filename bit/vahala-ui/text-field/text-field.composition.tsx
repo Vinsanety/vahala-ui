@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Box, MenuItem, IconButton, InputAdornment } from '@mui/material';
+import { Box, MenuItem, IconButton } from '@mui/material';
 
 import {
   Visibility as VisibilityIcon,
   VisibilityOff as VisibilityOffIcon,
+  AttachMoney as AttachMoneyIcon,
 } from '@mui/icons-material';
 
 import { ThemeProvider } from '@vahalawebdesign/vahala-ui.themes.theme-provider';
@@ -24,7 +25,7 @@ export const BasicTextField = () => {
   );
 };
 
-export const PasswordInput = () => {
+export const TextFieldAdornment = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -37,24 +38,31 @@ export const PasswordInput = () => {
 
   return (
     <ThemeProvider>
-      <TextField
-        type={showPassword ? 'text' : 'password'}
-        label="Password"
-        helperText="Never share your passwords"
-        InputProps={{
-          endAdornment: (
-            <InputAdornment position="end">
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+        <TextField
+          type={showPassword ? 'text' : 'password'}
+          label="Password"
+          helperText="Never share your passwords"
+          InputProps={{
+            endAdornment: (
               <IconButton
                 onClick={handleClickShowPassword}
                 onMouseDown={handleMouseDownPassword}
-                edge="end"
               >
                 {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
               </IconButton>
-            </InputAdornment>
-          ),
-        }}
-      />
+            ),
+          }}
+        />
+        <TextField
+          label="Amount"
+          type="number"
+          helperText="How much would you like to tip?"
+          InputProps={{
+            startAdornment: <AttachMoneyIcon />,
+          }}
+        />
+      </Box>
     </ThemeProvider>
   );
 };

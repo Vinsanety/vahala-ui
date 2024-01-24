@@ -126,6 +126,11 @@ const TextFieldStyles = styled(MuiTextField)<TextFieldProps>(({ theme }) => ({
   '.MuiFormHelperText-root': {
     margin: '0.25rem 0 0 0.25rem',
   },
+  // Adornments
+  '.MuiInputBase-adornedStart, .MuiInputBase-adornedEnd': {
+    // COLOR TBD
+    // color: ,
+  },
 }));
 
 export function TextField({

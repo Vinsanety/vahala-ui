@@ -34,6 +34,8 @@ export type ToggleButtonProps = MuiToggleButtonProps & {
 
 const ToggleButtonStyles = styled(MuiToggleButton)<ToggleButtonProps>(
   ({ theme }) => ({
+    color: theme.palette.primary.dark,
+    border: `0.125rem solid ${theme.palette.primary.dark}`,
     borderRadius: 0,
     transition: 'all 0.25s ease-in-out, outline 0.1s ease',
 
