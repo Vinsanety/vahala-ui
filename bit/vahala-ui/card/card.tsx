@@ -52,7 +52,7 @@ const CardStyles = styled(MuiCard)<CardProps>(() => ({
   gap: '0.5rem',
   padding: '1rem',
   borderRadius: '0.325rem',
-  '.MuiCardContent-root': {
+  '.MuiCardContent-root, .MuiCardContent-root:last-child': {
     padding: 0,
   },
 }));
@@ -68,7 +68,7 @@ export function Card({
   textButtonText,
 }: CardProps) {
   return (
-    <CardStyles elevation={5}>
+    <CardStyles elevation={2}>
       {(cardMediaImage || cardMediaSrc) && (
         <CardMedia
           sx={{ height: 320, width: '100%' }}
