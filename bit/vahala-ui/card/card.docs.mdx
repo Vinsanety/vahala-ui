@@ -1,8 +1,16 @@
 ---
-description: A Card component.
+description: An accessible and customizable standard Button component.
+labels: ['vahala-ui', 'card', 'a11y']
 ---
 
+import { ThemeProvider } from '@vahalawebdesign/vahala-ui.themes.theme-provider';
 import { Card } from './card';
+
+The `<Card />` component extends the [MUI Card](https://mui.com/material-ui/react-Card) including its theming, inline `sx` styling, and props.
+
+#### Accessibility
+
+The component is fully accessible and customizable: supporting mouse, keyboard, and touch interactions, focus behavior, and ARIA props.
 
 ### Component usage
 
@@ -13,5 +21,7 @@ import { Card } from './card';
 ### Render Card
 
 ```js live
-<Card cardTitle="Docs Card"></Card>
+<ThemeProvider>
+  <Card cardTitle="Docs Card"></Card>
+</ThemeProvider>
 ```

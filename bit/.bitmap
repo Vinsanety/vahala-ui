@@ -19,7 +19,7 @@
     "card": {
         "name": "card",
         "scope": "vahalawebdesign.vahala-ui",
-        "version": "0.0.1",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "vahala-ui/card"
     },

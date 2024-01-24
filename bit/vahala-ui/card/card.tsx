@@ -25,7 +25,7 @@ export type CardProps = MuiCardProps & {
    */
   cardContent?: ReactNode;
   /**
-   * Src of the img used in cardMedia
+   * Src of the image used in cardMedia
    */
   cardMediaSrc?: string;
   /**
@@ -47,8 +47,14 @@ export type CardProps = MuiCardProps & {
 };
 
 const CardStyles = styled(MuiCard)<CardProps>(() => ({
-  padding: '0.5rem',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '0.5rem',
+  padding: '1rem',
   borderRadius: '0.325rem',
+  '.MuiCardContent-root': {
+    padding: 0,
+  },
 }));
 
 export function Card({
@@ -75,12 +81,12 @@ export function Card({
       {(children || cardTitle || cardContent) && (
         <CardContent>
           {cardTitle && (
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography variant="h5" component="div">
               {cardTitle}
             </Typography>
           )}
           {cardContent && (
-            <Typography variant="body2" color="text.secondary">
+            <Typography sx={{ pt: 1 }} variant="body2" color="text.secondary">
               {cardContent}
             </Typography>
           )}
