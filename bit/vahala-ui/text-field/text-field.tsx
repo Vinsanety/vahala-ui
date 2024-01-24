@@ -142,6 +142,7 @@ export function TextField({
   focused,
   disabled,
   error,
+  ...props
 }: TextFieldProps) {
   return (
     <TextFieldStyles
@@ -160,6 +161,7 @@ export function TextField({
       disabled={disabled}
       error={error}
       InputLabelProps={{ shrink: true }}
+      {...props}
     >
       {children}
     </TextFieldStyles>

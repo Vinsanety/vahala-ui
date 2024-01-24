@@ -79,6 +79,7 @@ export function Checkbox({
   required,
   disabled = false,
   disableRipple = true,
+  ...props
 }: CheckboxProps) {
   return (
     <FormControlLabel
@@ -100,6 +101,7 @@ export function Checkbox({
           defaultChecked={defaultChecked}
           disabled={disabled}
           disableRipple={disableRipple}
+          {...props}
         />
       }
       label={required ? `${label}*` : label}

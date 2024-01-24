@@ -1,5 +1,10 @@
 import { useState } from 'react';
-import { Box, MenuItem } from '@mui/material';
+import { Box, MenuItem, IconButton, InputAdornment } from '@mui/material';
+
+import {
+  Visibility as VisibilityIcon,
+  VisibilityOff as VisibilityOffIcon,
+} from '@mui/icons-material';
 
 import { ThemeProvider } from '@vahalawebdesign/vahala-ui.themes.theme-provider';
 import { TextField } from './text-field';
@@ -15,6 +20,41 @@ export const BasicTextField = () => {
           helperText="Helper text"
         />
       </Box>
+    </ThemeProvider>
+  );
+};
+
+export const PasswordInput = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    event.preventDefault();
+  };
+
+  return (
+    <ThemeProvider>
+      <TextField
+        type={showPassword ? 'text' : 'password'}
+        label="Password"
+        helperText="Never share your passwords"
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <IconButton
+                onClick={handleClickShowPassword}
+                onMouseDown={handleMouseDownPassword}
+                edge="end"
+              >
+                {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
+              </IconButton>
+            </InputAdornment>
+          ),
+        }}
+      />
     </ThemeProvider>
   );
 };

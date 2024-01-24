@@ -33,7 +33,12 @@ const RadioStyles = styled(MuiRadio)<RadioProps>(({ theme }) => ({
   },
 }));
 
-export function Radio({ label, value, disableRipple = true }: RadioProps) {
+export function Radio({
+  label,
+  value,
+  disableRipple = true,
+  ...props
+}: RadioProps) {
   return (
     <FormControlLabel
       className="vuiRadio"
@@ -49,6 +54,7 @@ export function Radio({ label, value, disableRipple = true }: RadioProps) {
           label={label}
           value={value}
           disableRipple={disableRipple}
+          {...props}
         />
       }
       label={label}

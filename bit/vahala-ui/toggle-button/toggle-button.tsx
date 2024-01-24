@@ -86,6 +86,7 @@ export function ToggleButton({
   disableFocusRipple = true,
   onChange,
   selected,
+  ...props
 }: ToggleButtonProps) {
   return (
     <ToggleButtonStyles
@@ -94,6 +95,7 @@ export function ToggleButton({
       disableFocusRipple={disableFocusRipple}
       onChange={onChange}
       selected={selected}
+      {...props}
     >
       {children}
     </ToggleButtonStyles>

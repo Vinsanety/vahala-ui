@@ -113,6 +113,7 @@ export function Button({
   disabled = false,
   disableRipple = true,
   variant = 'contained',
+  ...props
 }: ButtonProps) {
   return (
     <ButtonStyles
@@ -123,6 +124,7 @@ export function Button({
       disabled={disabled}
       disableRipple={disableRipple}
       variant={color === 'primary' ? variant : 'outlined'}
+      {...props}
     >
       {children}
     </ButtonStyles>

@@ -66,9 +66,10 @@ export function Card({
   cardMediaTitle,
   primaryButtonText,
   textButtonText,
+  ...props
 }: CardProps) {
   return (
-    <CardStyles elevation={2}>
+    <CardStyles elevation={2} {...props}>
       {(cardMediaImage || cardMediaSrc) && (
         <CardMedia
           sx={{ height: 320, width: '100%' }}
