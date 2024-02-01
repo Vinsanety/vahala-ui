@@ -6,7 +6,7 @@ import { Card } from './card';
 export const BasicCard = () => {
   return (
     <ThemeProvider>
-      <Box sx={{ p: 2 }}>
+      <Box sx={{ p: 2, width: 350 }}>
         <Card cardTitle="Basic Card" cardContent="Card Content" />
       </Box>
     </ThemeProvider>
@@ -16,7 +16,7 @@ export const BasicCard = () => {
 export const CardOptions = () => {
   return (
     <ThemeProvider>
-      <Box sx={{ p: 2 }}>
+      <Box sx={{ p: 2, width: 350 }}>
         <Card
           cardTitle="Card Title"
           cardContent="Card Content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -33,11 +33,11 @@ export const CardOptions = () => {
 export const ExampleCard = () => {
   return (
     <ThemeProvider>
-      <Box sx={{ p: 2 }}>
+      <Box sx={{ p: 2, width: 350 }}>
         <Card
           cardTitle="Longs Peak"
           cardContent="Longs Peak is a high and prominent mountain in the northern Front Range of the Rocky Mountains of North America. The 14,259-foot fourteener is located in the Rocky Mountain National Park Wilderness, 9.6 miles southwest by south of the Town of Estes Park, Colorado, United States."
-          cardMediaImage="https://www.nps.gov/romo/planyourvisit/images/Longs_13.jpg?maxwidth=1300&autorotate=false&quality=78&format=webp"
+          cardMediaImage="https://www.nps.gov/romo/planyourvisit/images/Longs_13.jpg?width=1300&autorotate=false&quality=78&format=webp"
           cardMediaTitle="Longs Peak"
         />
       </Box>

@@ -37,6 +37,13 @@
         "mainFile": "index.ts",
         "rootDir": "vahala-ui/radio"
     },
+    "table": {
+        "name": "table",
+        "scope": "vahalawebdesign.vahala-ui",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "vahala-ui/table"
+    },
     "text-field": {
         "name": "text-field",
         "scope": "vahalawebdesign.vahala-ui",
