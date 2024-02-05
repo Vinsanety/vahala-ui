@@ -30,6 +30,13 @@
         "mainFile": "index.ts",
         "rootDir": "vahala-ui/checkbox"
     },
+    "pagination": {
+        "name": "pagination",
+        "scope": "vahalawebdesign.vahala-ui",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "vahala-ui/pagination"
+    },
     "radio": {
         "name": "radio",
         "scope": "vahalawebdesign.vahala-ui",
