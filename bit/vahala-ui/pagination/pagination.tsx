@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import {
   Pagination as MuiPagination,
   PaginationProps as MuiPaginationProps,
@@ -6,7 +5,6 @@ import {
 import { styled } from '@mui/material/styles';
 
 export type PaginationProps = MuiPaginationProps & {
-  children?: ReactNode;
   /**
    * Mui prop, the total number of pages
    */
@@ -66,7 +64,7 @@ const PaginationStyles = styled(MuiPagination)<PaginationProps>(
   })
 );
 
-export function Pagination({ children, count, onChange }: PaginationProps) {
+export function Pagination({ count, onChange, ...props }: PaginationProps) {
   return (
     <PaginationStyles
       color="primary"
@@ -76,8 +74,7 @@ export function Pagination({ children, count, onChange }: PaginationProps) {
       showLastButton
       onChange={onChange}
       count={count}
-    >
-      {children}
-    </PaginationStyles>
+      {...props}
+    />
   );
 }
