@@ -37,6 +37,12 @@ const defaultTheme = createTheme({
   },
   // ===Components===
   components: {
+    // ##Button##
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true,
+      },
+    },
     // ##Form Label##
     MuiFormLabel: {
       styleOverrides: {

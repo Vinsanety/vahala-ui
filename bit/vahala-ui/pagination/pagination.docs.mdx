@@ -3,16 +3,19 @@ description: An accessible, responsive, and customizable Pagination component.
 labels: ['vahala-ui', 'pagination', 'a11y']
 ---
 
+import { ThemeProvider } from '@vahalawebdesign/vahala-ui.themes.theme-provider';
 import { Pagination } from './pagination';
 
 ### Component usage
 
 ```js
-<Pagination></Pagination>
+<Pagination count={10} page={page} onChange={handleChange} />
 ```
 
 ### Render Pagination
 
 ```js live
-<Pagination></Pagination>
+<ThemeProvider>
+  <Pagination count={10} />
+</ThemeProvider>
 ```

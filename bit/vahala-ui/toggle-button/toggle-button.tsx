@@ -73,9 +73,14 @@ const ToggleButtonStyles = styled(MuiToggleButton)<ToggleButtonProps>(
     '&.Mui-selected': {
       color: theme.palette.common.white,
       backgroundColor: theme.palette.primary.main,
+      border: `0.125rem solid ${theme.palette.primary.dark}`,
       '&:hover': {
         color: theme.palette.common.white,
         backgroundColor: theme.palette.primary.dark,
+      },
+      '&:active': {
+        color: theme.palette.common.white,
+        backgroundColor: theme.palette.primary.light,
       },
     },
   })

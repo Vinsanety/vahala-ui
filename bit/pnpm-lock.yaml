@@ -134,7 +134,7 @@ importers:
         version: file:vahala-ui/checkbox(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
       '@vahalawebdesign/vahala-ui.pagination':
         specifier: workspace:*
-        version: file:vahala-ui/pagination(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
+        version: file:vahala-ui/pagination(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
       '@vahalawebdesign/vahala-ui.radio':
         specifier: workspace:*
         version: file:vahala-ui/radio(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
@@ -240,7 +240,7 @@ importers:
         version: file:vahala-ui/checkbox(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
       '@vahalawebdesign/vahala-ui.pagination':
         specifier: workspace:*
-        version: file:vahala-ui/pagination(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
+        version: file:vahala-ui/pagination(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
       '@vahalawebdesign/vahala-ui.radio':
         specifier: workspace:*
         version: file:vahala-ui/radio(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
@@ -530,6 +530,9 @@ importers:
       '@mdx-js/react':
         specifier: 1.6.22
         version: 1.6.22(react@18.2.0)
+      '@mui/material':
+        specifier: 5.10.14
+        version: 5.10.14(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.23)(react-dom@18.2.0)(react@18.2.0)
       '@teambit/mdx.ui.mdx-scope-context':
         specifier: 1.0.0
         version: 1.0.0(react-dom@18.2.0)(react@18.2.0)
@@ -20773,21 +20776,26 @@ packages:
       - typescript
     dev: false
 
-  file:vahala-ui/pagination(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0):
+  file:vahala-ui/pagination(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0):
     resolution: {directory: vahala-ui/pagination, type: directory}
     id: file:vahala-ui/pagination
     name: '@vahalawebdesign/vahala-ui.pagination'
     peerDependencies:
+      '@mui/material': '*'
       react: '*'
     peerDependenciesMeta:
+      '@mui/material':
+        optional: true
       react:
         optional: true
     dependencies:
       '@mdx-js/react': 1.6.22(react@18.2.0)
+      '@mui/material': 5.10.14(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.23)(react-dom@18.2.0)(react@18.2.0)
       '@teambit/mdx.ui.mdx-scope-context': 1.0.0(react-dom@18.2.0)(react@18.2.0)
       '@types/jest': 29.5.10
       '@types/react': 18.2.23
       '@types/react-dom': 18.2.17
+      '@vahalawebdesign/vahala-ui.themes.theme-provider': file:vahala-ui/themes/theme-provider(@mui/material@5.10.14)(@types/node@16.18.44)(eslint@7.32.0)(react@18.2.0)
       browserslist: 4.21.4
       eslint-plugin-import: 2.22.1(eslint@7.32.0)
       eslint-plugin-jest: 24.1.5(eslint@7.32.0)(typescript@5.1.3)
