@@ -68,7 +68,7 @@
     "toggle-button": {
         "name": "toggle-button",
         "scope": "vahalawebdesign.vahala-ui",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "vahala-ui/toggle-button"
     },

@@ -39,6 +39,12 @@ const ToggleButtonStyles = styled(MuiToggleButton)<ToggleButtonProps>(
     borderRadius: 0,
     transition: 'all 0.25s ease-in-out, outline 0.1s ease',
 
+    // Fixes toggle button "jumping" when active/selected
+    '&.MuiToggleButtonGroup-grouped:not(:first-of-type)': {
+      marginLeft: 0,
+      borderLeft: '0 solid transparent',
+    },
+
     // Add border radius to first and last toggle buttons
     '&:first-of-type': {
       borderTopLeftRadius: '0.325rem',
@@ -61,6 +67,7 @@ const ToggleButtonStyles = styled(MuiToggleButton)<ToggleButtonProps>(
     '&.Mui-focusVisible': {
       borderRadius: '0.325rem',
       outline: `0.375rem solid ${theme.palette.primary[100]}`,
+      zIndex: 1,
     },
 
     // Active state
