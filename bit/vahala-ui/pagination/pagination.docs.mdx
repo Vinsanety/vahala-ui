@@ -8,6 +8,8 @@ import { Pagination } from './pagination';
 
 The `<Pagination />` component extends the [MUI Pagination](https://mui.com/material-ui/react-pagination) including its theming, inline `sx` styling, and props.
 
+By default the `Pagination` component sets `hideNextButton` and `hidePrevButton` to false. The component also sets `showFirstButton`and`showLastButton` to true, so that all 4 navigational icon buttons are displayed by default. You may hide any or all of the 4.
+
 #### Accessibility
 
 The component is fully accessible and customizable: supporting mouse, keyboard, and touch interactions, focus behavior, and ARIA props. By default, the root node has a `role="navigation"` and `aria-label="pagination navigation"`. The paging buttons have an aria-label that identifies the purpose of the item ("go to first page", "go to previous page", "go to page 1" etc.). You can override these using the `getItemAriaLabel` prop [Pagination API](https://mui.com/material-ui/api/pagination/).

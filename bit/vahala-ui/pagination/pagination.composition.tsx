@@ -45,3 +45,40 @@ export const BasicPagination = () => {
     </ThemeProvider>
   );
 };
+
+export const HideButtonsPagination = () => {
+  const [page, setPage] = useState(1);
+
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    setPage(value);
+  };
+
+  return (
+    <ThemeProvider>
+      <Box
+        sx={{
+          p: 2,
+          mb: 2,
+          height: 220,
+          width: 520,
+          border: '2px solid darkgrey',
+          borderRadius: '0.325rem',
+        }}
+      >
+        <Typography variant="h5">Page {page}</Typography>
+        <Typography variant="body2" sx={{ mt: 2 }}>
+          {LoremIpsumText[page - 1]}
+        </Typography>
+      </Box>
+      <Pagination
+        count={10}
+        page={page}
+        onChange={handleChange}
+        hideNextButton
+        hidePrevButton
+        showLastButton={false}
+        showFirstButton={false}
+      />
+    </ThemeProvider>
+  );
+};

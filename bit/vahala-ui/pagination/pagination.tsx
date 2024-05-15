@@ -13,6 +13,22 @@ export type PaginationProps = MuiPaginationProps & {
    * Mui prop, callback fired when the page is changed
    */
   onChange?: Function;
+  /**
+   * Mui prop, when true it hides the next page icon button
+   */
+  hideNextButton?: Boolean;
+  /**
+   * Mui prop, when true it hides the previous page icon button
+   */
+  hidePrevButton?: Boolean;
+  /**
+   * Mui prop, when true it shows the go to first page icon button
+   */
+  showFirstButton?: Boolean;
+  /**
+   * Mui prop, when true it shows teh go to last page icon button
+   */
+  showLastButton?: Boolean;
 };
 
 const PaginationStyles = styled(MuiPagination)<PaginationProps>(
@@ -64,15 +80,25 @@ const PaginationStyles = styled(MuiPagination)<PaginationProps>(
   })
 );
 
-export function Pagination({ count, onChange, ...props }: PaginationProps) {
+export function Pagination({
+  count,
+  onChange,
+  hideNextButton = false,
+  hidePrevButton = false,
+  showFirstButton = true,
+  showLastButton = true,
+  ...props
+}: PaginationProps) {
   return (
     <PaginationStyles
       color="primary"
       variant="outlined"
       shape="rounded"
-      showFirstButton
-      showLastButton
       onChange={onChange}
+      hideNextButton={hideNextButton}
+      hidePrevButton={hidePrevButton}
+      showFirstButton={showFirstButton}
+      showLastButton={showLastButton}
       count={count}
       {...props}
     />
