@@ -33,7 +33,7 @@
     "pagination": {
         "name": "pagination",
         "scope": "vahalawebdesign.vahala-ui",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "vahala-ui/pagination"
     },
