@@ -33,6 +33,9 @@ export type PaginationProps = MuiPaginationProps & {
 
 const PaginationStyles = styled(MuiPagination)<PaginationProps>(
   ({ theme }) => ({
+    '.MuiPagination-ul': {
+      gap: '1rem 0',
+    },
     '.MuiButtonBase-root.MuiPaginationItem-outlined.MuiPaginationItem-rounded':
       {
         color: theme.palette.primary.dark,
